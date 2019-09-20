@@ -3,12 +3,14 @@ let express = require('express');
 // Import Body parser
 let bodyParser = require('body-parser');
 // Import Mongoose
-let mongoose = require('mongoose');
+// let mongoose = require('mongoose');
+var cors = require('cors');
 // Initialize the app
 let app = express();
+app.use(cors());
 
 // Import routes
-let apiRoutes = require("./api-routes")
+let apiRoutes = require("./api-routes.js")
 
 
 // Configure bodyparser to handle post requests
@@ -18,11 +20,11 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 // Connect to Mongoose and set connection variable
-mongoose.connect('mongodb://localhost/resthub');
+// mongoose.connect('mongodb://localhost/resthub');
 
-var db = mongoose.connection;
+// var db = mongoose.connection;
 // Setup server port
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 7722;
 
 
 // Send message for default URL

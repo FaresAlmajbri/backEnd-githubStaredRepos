@@ -17,6 +17,10 @@ router.route('/contacts')
     .get(contactController.index)
     .post(contactController.new);
 
+    router.route('/get/repos')
+    .post(contactController.getRepos);
+
+
 router.route('/contacts/:contact_id')
     .get(contactController.view)
     .patch(contactController.update)

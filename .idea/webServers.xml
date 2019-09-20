@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c7b566bf-7d2f-4566-bd3a-469dbad28f04" name="younis.ly" url="http://younis.ly">
+        <fileTransfer host="younis.ly" port="6934" privateKey="$USER_HOME$/.ssh/id_rsa.younis.ly" rootFolder="/home/younisly/shurdho.aleksander.younis.ly" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="6934" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="4968e150-a1b3-425b-b95a-b680292ed8d0" name="aleksander.younis.ly" url="http://younis.ly">
+        <fileTransfer host="younis.ly" port="6934" privateKey="$USER_HOME$/.ssh/id_rsa.younis.ly" rootFolder="/home/younisly/aleksander.younis.ly" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="6934" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

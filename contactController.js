@@ -1,92 +1,103 @@
-// Import contact model
-Contact = require('./contactModel');
+// Handle create contact actions
+exports.getRepos = async function (req, res) {
+    var request = require("request");
+    auth = "Basic " + new Buffer.from("wewer" + ":" + "wer",'base64');
+    auth= "RmFyZXNBbG1hamJyaTpPZzI2MjcjIzI3"
+    console.log(auth)
+    var options = { method: 'GET',
+      url: 'https://api.github.com/user/starred',
+      headers: 
+       { 'cache-control': 'no-cache',
+         Connection: 'keep-alive',
+        //  'Accept-Encoding': 'gzip, deflate',
+        //  'content-type': 'application/json',
+         Host: 'api.github.com',
+         'Postman-Token': '017e05d4-aa00-4de6-9225-713c117d0b1f,5fa6b5d8-1d98-45a5-89b5-b9e54eddaabb',
+         'Cache-Control': 'no-cache',
+         Accept: '*/*',
+         'User-Agent': 'PostmanRuntime/7.17.1',
+         Authorization: "Basic " + "RmFyZXNBbG1hamJyaTpPZzI2MjcjIzI3" } };
+    
+    await request(options, function (error, response, body) {
+      if (error) throw new Error(error);
+        // return response
+        let reposList= JSON.parse(body);
+        let responseToReturn=[];
+         for (let index = 0; index < reposList.length; index++) {
+             const element = reposList[index];
+             responseToReturn.push({name:element.name,link:element.html_url,language:element.language})
+         }
+      console.table(responseToReturn);
+      res.json(JSON.parse(body) );
+    });
+    
+
+};
 
 // Handle index actions
 exports.index = function (req, res) {
-    Contact.get(function (err, contacts) {
-        if (err) {
-            res.json({
-                status: "error",
-                message: err,
-            });
-        }
-        res.json({
-            status: "success",
-            message: "Contacts retrieved successfully",
-            data: contacts
-        });
+    res.json({
+        message: 'New contact created!',
+        data: "contact"
     });
 };
 
 // Handle create contact actions
 exports.new = function (req, res) {
-    var contact = new Contact();
-    contact.name = req.body.name ? req.body.name : contact.name;
-    contact.gender = req.body.gender;
-    contact.email = req.body.email;
-    contact.phone = req.body.phone;
 
-    // save the contact and check for errors
-    contact.save(function (err) {
-        // if (err)
-        //     res.json(err);
 
-        res.json({
-            message: 'New contact created!',
-            data: contact
-        });
+    res.json({
+        message: 'New contact created!',
+        data: "contact"
     });
 };
 
 
 // Handle view contact info
 exports.view = function (req, res) {
-    Contact.findById(req.params.contact_id, function (err, contact) {
-        if (err)
-            res.send(err);
-        res.json({
-            message: 'Contact details loading..',
-            data: contact
-        });
+    res.json({
+        message: 'New contact created!',
+        data: "contact"
     });
 };
 
 // Handle update contact info
 exports.update = function (req, res) {
-
-    Contact.findById(req.params.contact_id, function (err, contact) {
-        if (err)
-            res.send(err);
-
-        contact.name = req.body.name ? req.body.name : contact.name;
-        contact.gender = req.body.gender;
-        contact.email = req.body.email;
-        contact.phone = req.body.phone;
-
-        // save the contact and check for errors
-        contact.save(function (err) {
-            if (err)
-                res.json(err);
-            res.json({
-                message: 'Contact Info updated',
-                data: contact
-            });
-        });
+    res.json({
+        message: 'New contact created!',
+        data: "contact"
     });
 };
 
 
 // Handle delete contact
 exports.delete = function (req, res) {
-    Contact.remove({
-        _id: req.params.contact_id
-    }, function (err, contact) {
-        if (err)
-            res.send(err);
-
-        res.json({
-            status: "success",
-            message: 'Contact deleted'
-        });
+    res.json({
+        message: 'New contact created!',
+        data: "contact"
     });
 };
+
+async function getReposFromGithub (username,password){
+    var request = require("request");
+
+    var options = { method: 'GET',
+      url: 'https://api.github.com/user/starred',
+      headers: 
+       { 'cache-control': 'no-cache',
+         Connection: 'keep-alive',
+         'Accept-Encoding': 'gzip, deflate',
+         Host: 'api.github.com',
+         'Postman-Token': '017e05d4-aa00-4de6-9225-713c117d0b1f,5fa6b5d8-1d98-45a5-89b5-b9e54eddaabb',
+         'Cache-Control': 'no-cache',
+         Accept: '*/*',
+         'User-Agent': 'PostmanRuntime/7.17.1',
+         Authorization: 'Basic RmFyZXNBbG1hamJyaTpPZzI2MjcjIzI3' } };
+    
+    await request(options, function (error, response, body) {
+      if (error) throw new Error(error);
+        return response
+      console.log(body);
+    });
+    
+}
