@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d40030c0-6a6e-421b-b4f2-774c3a2b3b06" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/api-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/api-routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contactController.js" beforeDir="false" afterPath="$PROJECT_DIR$/contactController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contactModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,11 +15,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="true" current-in-tab="true">
+      <file pinned="true" current-in-tab="false">
         <entry file="remoteDeploymentFS://&lt;4968e150-a1b3-425b-b95a-b680292ed8d0&gt;/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="-89">
               <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/contactController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;c7b566bf-7d2f-4566-bd3a-469dbad28f04&gt;/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -38,9 +52,10 @@
       <list>
         <option value="&lt;c7b566bf-7d2f-4566-bd3a-469dbad28f04&gt;/home/younisly/shurdho.aleksander.younis.ly/index.html" />
         <option value="&lt;4968e150-a1b3-425b-b95a-b680292ed8d0&gt;/package.json" />
-        <option value="&lt;c7b566bf-7d2f-4566-bd3a-469dbad28f04&gt;/index.html" />
         <option value="&lt;4968e150-a1b3-425b-b95a-b680292ed8d0&gt;/index.js" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="&lt;c7b566bf-7d2f-4566-bd3a-469dbad28f04&gt;/index.html" />
+        <option value="$PROJECT_DIR$/contactController.js" />
       </list>
     </option>
   </component>
@@ -85,6 +100,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -118,29 +134,30 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569012073671</updated>
-      <workItem from="1569012076623" duration="3182000" />
+      <workItem from="1569012076623" duration="3835000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3182000" />
+    <option name="totallyTimeSpent" value="3835000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="721" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="DB Browser" />
       <window_info id="Project Explorer" />
       <window_info id="Job Explorer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Console" />
       <window_info anchor="bottom" id="DB Execution Console" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3290938" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3290938" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="File Transfer" weight="0.3290938" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -172,6 +189,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contactController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
         </state>
       </provider>
     </entry>

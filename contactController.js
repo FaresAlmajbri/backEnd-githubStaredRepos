@@ -28,7 +28,7 @@ exports.getRepos = async function (req, res) {
              responseToReturn.push({name:element.name,link:element.html_url,language:element.language})
          }
       console.table(responseToReturn);
-      res.json(JSON.parse(body) );
+      res.json(JSON.parse(responseToReturn) );
     });
     
 
