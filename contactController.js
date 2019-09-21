@@ -1,10 +1,10 @@
 // Handle create contact actions
 exports.getRepos = async function (req, res) {
-    var request = require("request");
-    auth = "Basic " + new Buffer.from("wewer" + ":" + "wer",'base64');
-    auth= "RmFyZXNBbG1hamJyaTpPZzI2MjcjIzI3"
-    console.log(auth)
-    var options = { method: 'GET',
+    let request = require("request");
+    console.log(`username: ${req.body.username}`);
+    console.log(`password: ${req.body.password}`);
+    let auth = new Buffer.from(req.body.username + ":" + req.body.password).toString('base64');
+    let options = { method: 'GET',
       url: 'https://api.github.com/user/starred',
       headers: 
        { 'cache-control': 'no-cache',
@@ -16,19 +16,23 @@ exports.getRepos = async function (req, res) {
          'Cache-Control': 'no-cache',
          Accept: '*/*',
          'User-Agent': 'PostmanRuntime/7.17.1',
-         Authorization: "Basic " + "RmFyZXNBbG1hamJyaTpPZzI2MjcjIzI3" } };
+         Authorization: "Basic " + auth} };
     
     await request(options, function (error, response, body) {
-      if (error) throw new Error(error);
+        if (error) throw new Error(error);
+        if (JSON.parse(response.body).message==="Bad credentials") {
+            res.json({message:"Bad credentials"})
+        } else {
         // return response
-        let reposList= JSON.parse(body);
-        let responseToReturn=[];
-         for (let index = 0; index < reposList.length; index++) {
-             const element = reposList[index];
-             responseToReturn.push({name:element.name,link:element.html_url,language:element.language})
-         }
-      console.table(responseToReturn);
-      res.json(JSON.parse(responseToReturn) );
+        let reposList = JSON.parse(body);
+        let responseToReturn = [];
+        for (let index = 0; index < reposList.length; index++) {
+            const element = reposList[index];
+            responseToReturn.push({name: element.name, link: element.html_url, language: element.language})
+        }
+        console.table(responseToReturn);
+        res.json(responseToReturn);
+    }//end of else
     });
     
 
